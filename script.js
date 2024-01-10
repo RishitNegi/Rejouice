@@ -40,9 +40,12 @@ function scrollTrigger() {
 scrollTrigger();
 
 var playerCloser = document.querySelector(".nav .player-close");
+var menu = document.querySelector(".menu");
+var menuButton = document.querySelector(".menu-button");
+var menuCloser = document.querySelector("#menu-closer");
 var playReel = document.querySelector(".play-reel");
 var follower = document.querySelector("#follower");
-var page1 = document.querySelector(".page1");
+var page1 = document.querySelector(".page1-content");
 var main = document.querySelector("#main");
 var elem = document.querySelector(".elem");
 var page6 = document.querySelector(".page6");
@@ -68,6 +71,7 @@ function handleMediaChange(e) {
       page8Animation();
       page6Cursor();
       page6mouse();
+      menuToggle();
     }
   }
 }
@@ -99,8 +103,17 @@ function loader() {
     },
   });
 }
-
 loader();
+
+function menuToggle() {
+  menuButton.addEventListener("click", () => {
+    menu.style.top = 0;
+    console.log("toggled");
+  });
+  menuCloser.addEventListener("click", () => {
+    menu.style.top = "-100%";
+  });
+}
 
 function cursorEffect() {
   document.addEventListener("mousemove", function (dets) {
