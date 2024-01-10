@@ -40,7 +40,7 @@ function scrollTrigger() {
 scrollTrigger();
 
 var playerCloser = document.querySelector(".nav .player-close");
-var more = document.querySelector(".more");
+var playReel = document.querySelector(".play-reel");
 var follower = document.querySelector("#follower");
 var page1 = document.querySelector(".page1");
 var main = document.querySelector("#main");
@@ -160,9 +160,9 @@ function page6mouse() {
 
 function reelPlayer() {
   page1.addEventListener("click", () => {
-    more.style.left = "0";
-    more.style.width = "100vw";
-    more.style.transition = "1s ease-in-out";
+    playReel.style.left = "0";
+    playReel.style.width = "100vw";
+    playReel.style.transition = "1s ease-in-out";
     follower.style.display = "none";
     videoReel.currentTime = 0;
   });
@@ -172,7 +172,7 @@ reelPlayer();
 var videoReel = document.querySelector("#video-reel");
 
 function hideReel() {
-  gsap.to(more, {
+  gsap.to(playReel, {
     left: "-100%",
     duration: 0.1, // Adjust the duration as needed
   });

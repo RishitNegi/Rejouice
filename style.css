@@ -204,7 +204,7 @@ nav a:hover::before {
 
 
 
-/* Responsive .more Reel */
+/* Responsive .play-reel Reel */
 .responsive-reel {
   position: absolute;
   z-index: 9;
@@ -247,7 +247,7 @@ nav a:hover::before {
   gap: 2vw;
 }
 
-.more {
+.play-reel {
   width: 100vw;
   height: 100%;
   position: absolute;
@@ -260,13 +260,12 @@ nav a:hover::before {
   justify-content: center;
 }
 
-.more .videoreel {
+.play-reel .videoreel {
   width: 80%;
-  background-color: red;
   position: relative;
 }
 
-.more video {
+.play-reel video {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -277,11 +276,11 @@ nav a:hover::before {
 }
 
 
-.more h1 {
+.play-reel h1 {
   color: white;
 }
 
-.more .nav {
+.play-reel .nav {
   width: 100%;
   height: auto;
   padding: 1.5vmax;
@@ -299,7 +298,7 @@ nav a:hover::before {
   background-color: #000;
 }
 
-.more .nav .player-close {
+.play-reel .nav .player-close {
   height: 3.5vmax;
   width: 3.5vmax;
   font-weight: 400;
@@ -316,7 +315,7 @@ nav a:hover::before {
   z-index: 999;
 }
 
-.more .nav button:hover {
+.play-reel .nav button:hover {
   box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.7);
 }
 
