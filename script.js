@@ -49,7 +49,6 @@ var page6 = document.querySelector(".page6");
 var svg1 = document.querySelector("#svg1");
 var page6Follower = document.querySelector(".page6-follower");
 
-
 // Cursor Follower
 
 let mm1024 = window.matchMedia("(min-width: 1024px)");
@@ -68,6 +67,7 @@ function handleMediaChange(e) {
       page7Animation();
       page8Animation();
       page6Cursor();
+      page6mouse();
     }
   }
 }
@@ -102,9 +102,6 @@ function loader() {
 
 loader();
 
-
-
-
 function cursorEffect() {
   document.addEventListener("mousemove", function (dets) {
     gsap.to(follower, {
@@ -137,10 +134,8 @@ function page6Cursor() {
       y: dets1.y,
     });
   });
-
-  
 }
-page6Cursor();
+// page6Cursor();
 
 function page6mouse() {
   svg1.addEventListener("mouseenter", () => {
@@ -150,20 +145,18 @@ function page6mouse() {
       opacity: 1,
       duration: 0.1,
     });
-
   });
-  
+
   svg1.addEventListener("mouseleave", () => {
     gsap.to(page6Follower, {
       scale: 0,
       opacity: 0,
       duration: 0.1,
     });
-
   });
 }
 
-page6mouse()
+// page6mouse();
 
 function reelPlayer() {
   page1.addEventListener("click", () => {
@@ -171,32 +164,35 @@ function reelPlayer() {
     more.style.width = "100vw";
     more.style.transition = "1s ease-in-out";
     follower.style.display = "none";
+    videoReel.currentTime = 0;
   });
 }
 reelPlayer();
 
+var videoReel = document.querySelector("#video-reel");
+
+function hideReel() {
+  gsap.to(more, {
+    left: "-100%",
+    duration: 0.1, // Adjust the duration as needed
+  });
+
+  gsap.to(follower, {
+    display: "flex",
+    scale: 1,
+  });
+}
+
 function reelCloser() {
   playerCloser.addEventListener("click", () => {
-    gsap.to(more, {
-      left: "-100%",
-      duration: 0.1, // Adjust the duration as needed
-    });
-    gsap.to(follower, {
-      display: "flex",
-      scale: 1,
-    });
+    videoReel.muted = true;
+    hideReel();
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      gsap.to(more, {
-        left: "-100%",
-        duration: 0.1, // Adjust the duration as needed
-      });
-      gsap.to(follower, {
-        display: "flex",
-        scale: 1,
-      });
+      videoReel.muted = true;
+      hideReel();
     }
   });
 }
@@ -386,7 +382,6 @@ function page8Animation() {
   });
 }
 
-
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -396,7 +391,6 @@ var swiper = new Swiper(".mySwiper", {
     disableOnInteraction: "true",
   },
 });
-
 
 var videocard1 = document.getElementById("videocard1");
 var videocard2 = document.getElementById("videocard2");

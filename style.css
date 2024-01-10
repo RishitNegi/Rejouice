@@ -37,7 +37,6 @@ body {
   background-color: black;
   position: relative;
   z-index: 100;
-  /* display: none; */
 }
 
 #loader h3 {
@@ -67,7 +66,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -256,15 +255,27 @@ nav a:hover::before {
   left: -120%;
   transition: .5s ease;
   background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.more iframe {
-  width: 100vw;
+.more .videoreel {
+  width: 80%;
+  background-color: red;
+  position: relative;
+}
+
+.more video {
+  position: relative;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
   border: none;
   background-color: #000;
+  /* display: none; */
 }
+
 
 .more h1 {
   color: white;
@@ -301,6 +312,8 @@ nav a:hover::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 999;
 }
 
 .more .nav button:hover {
@@ -736,12 +749,15 @@ button p {
   width: 40%;
   height: fit-content;
   position: absolute;
+  z-index: 3;
+  
 }
 
 .page6-center svg {
   width: 40%;
   height: fit-content;
   position: absolute;
+  z-index: 3;
 }
 
 .page6-center .svg-text {
@@ -957,6 +973,16 @@ button p {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+
+
+
+
+
+
+
+
 
 .page9 {
   width: 100%;
