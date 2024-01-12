@@ -785,7 +785,7 @@ button p {
 
 .part2-stagger h1 {
   width: fit-content;
-  font-size: 4vw;
+  font-size: 4vmax;
   font-weight: 100;
   text-align: center;
 }
@@ -799,7 +799,7 @@ button p {
   content: '';
   position: absolute;
   width: 100%;
-  height: .2vw;
+  height: .2vmax;
   background-color: black;
   bottom: 5%;
   left: 0;
@@ -823,7 +823,7 @@ button p {
   content: '';
   position: absolute;
   width: 100%;
-  height: .2vw;
+  height: .2vmax;
   background-color: black;
   z-index: -1;
   bottom: 5%;
@@ -1357,7 +1357,7 @@ button p {
 
 .page9-stagger h1 {
   width: fit-content;
-  font-size: 4vw;
+  font-size: 4vmax;
   font-weight: 100;
   text-align: center;
 }
@@ -1373,7 +1373,7 @@ button p {
   content: '';
   position: absolute;
   width: 100%;
-  height: .2vw;
+  height: .2vmax;
   background-color: black;
   bottom: 5%;
   left: 0;
@@ -1397,7 +1397,7 @@ button p {
   content: '';
   position: absolute;
   width: 100%;
-  height: .2vw;
+  height: .2vmax;
   background-color: black;
   z-index: -1;
   bottom: 5%;

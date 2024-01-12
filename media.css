@@ -88,6 +88,17 @@
         flex-direction: column;
     }
 
+    .page3 h1 {
+    font-size: 3vmax;    
+    }
+
+    .part2-stagger h1 {
+        width: fit-content;
+        font-size: 4vmax;
+        font-weight: 100;
+        text-align: center;
+      }
+
 
 
 
@@ -199,4 +210,12 @@
         height: 50vh;
         padding: 0;
     }
+
+
+    .page9-stagger h1 {
+        width: fit-content;
+        font-size: 4vmax;
+        font-weight: 100;
+        text-align: center;
+      }
 }
