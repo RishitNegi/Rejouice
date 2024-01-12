@@ -115,7 +115,17 @@ function menuToggle() {
 }
 menuToggle()
 
-window.onresize = function(){ location.reload(); }
+let previousWidth = window.innerWidth;
+
+window.onresize = function() {
+  // Check if the width has changed along the x-axis
+  if (Math.abs(window.innerWidth - previousWidth) > 0) {
+    // Reload the page
+    location.reload();
+  }
+  // Update the previous width
+  previousWidth = window.innerWidth;
+};
 
 
 function cursorEffect() {
