@@ -54,12 +54,12 @@ var page6Follower = document.querySelector(".page6-follower");
 
 // Cursor Follower
 
-let mm1024 = window.matchMedia("(min-width: 1024px)");
+let mm1024 = window.matchMedia("(min-width: 1200px)");
 
 function handleMediaChange(e) {
   if (e.matches) {
     // Media query matches, add your cursor effect or other code here
-    if (window.innerWidth >= 1024) {
+    if (window.innerWidth >= 1200) {
       cursorEffect();
       reelPlayer();
       reelCloser();
@@ -71,7 +71,7 @@ function handleMediaChange(e) {
       page8Animation();
       page6Cursor();
       page6mouse();
-      menuToggle();
+      // menuToggle();
     }
   }
 }
@@ -108,12 +108,15 @@ loader();
 function menuToggle() {
   menuButton.addEventListener("click", () => {
     menu.style.top = 0;
-    console.log("toggled");
   });
   menuCloser.addEventListener("click", () => {
     menu.style.top = "-100%";
   });
 }
+menuToggle()
+
+window.onresize = function(){ location.reload(); }
+
 
 function cursorEffect() {
   document.addEventListener("mousemove", function (dets) {
@@ -269,6 +272,7 @@ function page2Animation() {
   // page2 part2 text reveal
 }
 
+
 function page3Animation() {
   gsap.from(".part2-stagger a h1", {
     y: 130,
@@ -399,7 +403,7 @@ var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
-  speed: 9000,
+  speed: 7000,
   autoplay: {
     disableOnInteraction: "true",
   },
